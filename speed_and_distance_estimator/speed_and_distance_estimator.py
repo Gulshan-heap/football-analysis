@@ -4,9 +4,9 @@ sys.path.append('../')
 from utils import measure_distance ,get_foot_position
 
 class SpeedAndDistance_Estimator():
-    def __init__(self):
-        self.frame_window=5
-        self.frame_rate=24
+    def __init__(self,fps=24,frame_window=5):
+        self.frame_window= frame_window
+        self.frame_rate= fps
     
     def add_speed_and_distance_to_tracks(self,tracks):
         total_distance= {}
